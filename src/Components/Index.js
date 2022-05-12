@@ -17,7 +17,7 @@ const Index = () => {
   const handleInput = (value, index) => {
     console.log("value", value);
       console.log("index", index);
-      
+    
   };
 
   return (
