@@ -14,11 +14,10 @@ const Index = () => {
     array[index] = true;
     setToggle(array);
   };
-  const handleInput = (value, index) => {
-    console.log("value", value);
-      console.log("index", index);
-    
+  const handleInput = (e) => {
+    setInput(e.target.value);
   };
+  const handleSave = () => {};
 
   return (
     <div className="container-fluid my-5">
@@ -42,16 +41,21 @@ const Index = () => {
             <label>
               {item}
               <input
+                value={input}
                 className="mx-4"
                 type="text"
                 name="ques1"
                 autoComplete="off"
-                onChange={() => {
-                  handleInput(item, index);
-                }}
+                onChange={handleInput}
               ></input>
             </label>
-            <button type="submit" className="btn btn-primary">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={() => {
+                handleSave(index);
+              }}
+            >
               Save
             </button>
           </div>
