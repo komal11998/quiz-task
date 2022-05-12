@@ -14,10 +14,16 @@ const Index = () => {
     array[index] = true;
     setToggle(array);
   };
+    
   const handleInput = (e) => {
     setInput(e.target.value);
   };
-  const handleSave = () => {};
+    
+    const handleSave = () => {
+        if (input) {
+          
+      }
+  };
 
   return (
     <div className="container-fluid my-5">
